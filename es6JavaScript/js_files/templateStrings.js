@@ -11,9 +11,9 @@ console.log(getMessage());
 // 
 // 
 // ES6 - Template strings/string interpolation
-function getMessage6() {
+function getMessageES6() {
 
     return `The year is ${new Date().getFullYear() + 1}`;
 }
 
-console.log(getMessage6());
+console.log(getMessageES6());

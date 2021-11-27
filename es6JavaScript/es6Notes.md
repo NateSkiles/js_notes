@@ -10,3 +10,13 @@
     * ```var``` declares a variable globally, or locally to an entire function _regardless_ of block-scope.
 * _Note:_ Many issues with ```let``` can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
 
+#### Template Strings/String Interpolation
+Instead of traditional string concatenation, back ticks ``` `template string` ``` are used to interpolate variables or even functions into strings.
+
+```javascript
+// Returns current year + 1
+function getMessageES6() {
+
+    return `The year is ${new Date().getFullYear() + 1}`;
+}
+```
