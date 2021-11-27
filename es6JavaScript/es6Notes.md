@@ -11,7 +11,7 @@
 * _Note:_ Many issues with ```let``` can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
 
 ### Template Strings
-#### Template string/string interportlation syntax
+#### Template string/string interpolation syntax
 Instead of traditional string concatenation, back ticks ``` `foo ${bar}` ``` are used to interpolate variables or even functions into strings.
 
 ```javascript
