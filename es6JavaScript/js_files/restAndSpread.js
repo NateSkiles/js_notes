@@ -10,7 +10,7 @@ console.log(addNumbers(1, 2, 3, 4, 5, 6, 6, 7, 3, 546, 1234));
 
 // Spread Operator
 // Spreads out items from an array
-const goodTeams = ['Cowbous'];
+const goodTeams = ['Cowboys'];
 const badTeams = ['Eagles', 'WFT', 'Giants'];
 
 // const nfcEast = goodTeams.concat(badTeams);
