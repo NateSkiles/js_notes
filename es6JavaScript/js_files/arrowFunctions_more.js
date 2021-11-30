@@ -19,9 +19,17 @@ const fibonacci = n => {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+console.log(fibonacci(9));
+
 const profile = {
-    name: 'Alex',
-    getName: function () { 
-        return this.name 
+    name: 'Nate',
+    get: function () {
+        return `This profile\'s name is ${this.name}`;
+    },
+    set: function (name) {
+        this.name = name;
     }
 };
+
+profile.set('Jake');
+console.log(profile.get());

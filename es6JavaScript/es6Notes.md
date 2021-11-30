@@ -56,3 +56,7 @@ Arrow functions take advantage of **_Lexical This_**.
 
 Binds the value of ```this.``` to the surrounding context. Making the behavior of ```this.``` how it is _expected_ to be.
 
+<br>
+
+### Enhanced Object Literals
+ 
