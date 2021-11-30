@@ -59,4 +59,71 @@ Binds the value of ```this.``` to the surrounding context. Making the behavior o
 <br>
 
 ### Enhanced Object Literals
- 
+#### One of the most popular patterns for creating objects
+ES6 makes the object literal more succinct and powerful by extending the syntax in some ways.
+
+```javascript
+// Before
+function createFooBar(foo, bar) {
+    return {
+        foo: foo,
+        bar: bar
+    };
+}
+
+// After
+function createFooBar(foo, bar) {
+    return {
+        foo,
+        bar
+    };
+}
+```
+
+Eliminate the duplication when a _property_ of an object is the _same_ as the local variable name by including the name _without_ a colon and value.
+
+Internally, when a property of an object literal _only_ has a name, the JavaScript engine searches for a variable with the _same_ name in the surrounding scope.
+
+If the JavaScript engine _cant_ find one, it assigns the property the value of the variable.
+
+#### Default Parameters
+In JavaScript, a parameter has a _default_ value of ```undefined```.
+
+Meaning that if you **don’t** pass the arguments into the function, its parameters _will_ have the default values of ```undefined```
+
+```javascript
+// Before
+function sum(a, b) {
+    if (a === undefined) {
+        a = 0;
+    }
+
+    if (b === undefined) {
+        b = 0;
+    }
+
+    return a + b;
+}
+
+// After
+function sum(a = 0, b = 0) {
+    return a + b;
+}
+```
+
+#### Rest & Spread
+The rest operator ```...``` puts **_the rest_** of some specific user-supplied values into a JavaScript array.
+
+Spread syntax **_expands iterables_** into individual elements.
+
+The **rest operator** is used to put the rest of some specific user-supplied values into a JavaScript array.
+
+
+The text after the rest operator _references_ the values you wish to encase inside an array. 
+
+You can **_ONLY_** use it before the _last_ parameter in a function definition.
+
+_Note:_ For best examples reference [restAndSpread.js](./js_files/restAndSpread.js) && [restAndSpread_exer.js](./js_files/restAndSpread_exer.js)
+
+
+
