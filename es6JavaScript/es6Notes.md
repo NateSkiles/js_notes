@@ -125,5 +125,18 @@ You can **_ONLY_** use it before the _last_ parameter in a function definition.
 
 _Note:_ For best examples reference [restAndSpread.js](./js_files/restAndSpread.js) && [restAndSpread_exer.js](./js_files/restAndSpread_exer.js)
 
+<br>
 
+### Deconstructing
+#### Declaring variables using deconstructed objects
+When declaring a variable you can deconstruct the object's properties allowing for cleaner code. 
 
+This can be done when the name of the variable  being declared matches the name of the property that is being referenced.
+
+```javascript
+let expense = {
+    type: 'meal',
+    amount: 50.00
+};
+const { type, amount } = expense;
+```
