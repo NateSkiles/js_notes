@@ -1,4 +1,4 @@
-cd  ## Notes On ES6 Features
+## Notes On ES6 Features
 
 ### Const vs. Let (See ya later var)
 #### Const:
