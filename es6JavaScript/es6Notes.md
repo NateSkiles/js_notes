@@ -1,4 +1,4 @@
-## Notes On ES6 Features
+cd  ## Notes On ES6 Features
 
 ### Const vs. Let (See ya later var)
 #### Const:
@@ -129,9 +129,9 @@ _Note:_ For best examples reference [restAndSpread.js](./js_files/restAndSpread.
 
 ### Deconstructing
 #### Declaring variables using deconstructed objects
-When declaring a variable you can deconstruct the object's properties allowing for cleaner code. 
+When declaring a variable you can deconstruct the object's _properties_ allowing for cleaner code. 
 
-This can be done when the name of the variable  being declared matches the name of the property that is being referenced.
+This can be done when the name of the variable  being declared is the **same** as the name of the property that is being referenced.
 
 ```javascript
 let expense = {
@@ -140,3 +140,55 @@ let expense = {
 };
 const { type, amount } = expense;
 ```
+
+If you try to declare using a property that _doesn't_ exist, returns ```undefined```.
+
+#### Pulling properties off objects that are passed to functions
+When passing an object as the _argument_ of a function, use deconstruction to pull _properties_ of that object.
+```javascript
+function fileSummary(file) {
+    return `The file ${file.name}.${file.extension} has a size of ${file.size}`
+};
+```
+**_Note_**: If you know the names of the _properties_ being pulled off an _object_ are going to be the **same** as the names declared on the object, use curly brackets ```{ }``` to  pass the _attributes_ themselves. Saving you the trouble of referencing the object the property belongs.
+
+> ``` object.property ``` **_VS_** ```property```
+
+[Example](./js_files/deconstructing_cont.js)
+
+
+#### Deconstructing Arrays
+When you are going to call an _element_ of an _array_, you can deconstruct the array to pull out a **specific** element.
+
+Additionally, use the **rest** operator to access the _rest_ of any element of an array.
+
+```javascript
+const [ name1, name2, ...rest ] = companies
+```
+[Example](./js_files/deconstructing_arrays.js)
+
+#### Deconstructing Arrays and Objects
+
+![Por que no los dos](https://media.giphy.com/media/3o85xIO33l7RlmLR4I/giphy.gif)
+
+You can deconstructing to access properties off _objects_ **nested** in an _array_. 
+
+The deconstructing always reads **_outside in_**.
+
+```const [{ location }] = companies;```
+
+Would read the _location_ property off of the '_company_' object in the _companies_ array and write it to the ```const``` _location_.
+
+You can also deconstruct an _object_ with an _array_ as the _key's value_.
+
+
+```javascript
+const myLocation = {
+    locations: ['Home', 'Grocery Store', 'Coffee Shop']
+};
+
+const { locations: [ currentLocation ] } = myLocation;
+```
+The code above is looks in the object _myLocation_ and searchs for the property _locations_ - if it **exists**, return the _first element_ of the array. In this case returning ```'Home'```.
+
+[Example](./js_files/deconstructing_losDos.js)
