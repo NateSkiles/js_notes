@@ -127,8 +127,10 @@ _Note:_ For best examples reference [restAndSpread.js](./js_files/restAndSpread.
 
 <br>
 
-### Deconstructing
+### Deconstructing Assignments
 #### Declaring variables using deconstructed objects
+Used to unpack values from arrays, or properties from objects, into distinct variables.
+
 When declaring a variable you can deconstruct the object's _properties_ allowing for cleaner code. 
 
 This can be done when the name of the variable  being declared is the **same** as the name of the property that is being referenced.
