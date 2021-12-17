@@ -194,3 +194,7 @@ const { locations: [ currentLocation ] } = myLocation;
 The code above is looks in the object _myLocation_ and searchs for the property _locations_ - if it **exists**, return the _first element_ of the array. In this case returning ```'Home'```.
 
 [Example](./js_files/deconstructing_losDos.js)
+
+
+#### [Convert array of array into an array of objects](./js_files/deconstructing_exer2.js)
+#### [BOSS FIGHT](./js_files/deconstructing_BOSSFIGHT.js)
