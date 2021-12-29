@@ -191,10 +191,77 @@ const myLocation = {
 
 const { locations: [ currentLocation ] } = myLocation;
 ```
-The code above is looks in the object _myLocation_ and searchs for the property _locations_ - if it **exists**, return the _first element_ of the array. In this case returning ```'Home'```.
+The code above is looks in the object _myLocation_ and searches for the property _locations_ - if it **exists**, return the _first element_ of the array. In this case returning ```'Home'```.
 
 [Example](./js_files/deconstructing_losDos.js)
 
 
 #### [Convert array of array into an array of objects](./js_files/deconstructing_exer2.js)
 #### [BOSS FIGHT](./js_files/deconstructing_BOSSFIGHT.js)
+
+<br>
+
+## Classes
+Classes are a template for creating objects.
+
+Classes in JS are built on prototypes but also have some syntax and semantics that are not shared wit ES% class-like semantics
+
+Classes are _"special functions"_, and have two component:
+* [Class Declaration](#class-declaration)
+* [Class Expressions](#class-expressions)
+
+### Class Declaration
+One way to define a class is using _class declaration_. Using the ```class``` keyword with the name of the class.
+```javascript
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
+
+#### Hoisting
+The difference between **function declarations** and **class declarations** is that while functions can be called in code that appears before they are defined, classes **_MUST_** be defined before they can be constructed.
+
+_Note_: Failing to declare a class before calling it will result in a ```ReferenceError```
+
+### Class Expressions
+A _class expression_ is another way to define a class.
+
+Can be named or unnamed.
+
+The name given to a named expression is _local_ to the class's body. However, it can be access via the ```name``` property
+```javascript
+// named
+let Rectangle = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+// output: "Rectangle2"
+console.log(Rectangle.name);
+```
+
+_Note_: Class expressions **MUST** be declared before they can be used. They are subject to the same hoisting restrictions as class declarations.
+
+### Class body & method definitions
+The body of  class is the part that is in curly brackets ```{}```. This is where you define class members, 
+such as methods or constructor.
+
+#### Strict Mode
+The body of a class is executed in _strict mode_
+* Code written here is subject to stricter syntax
+    * Increases performance
+* Errors that would be otherwise silent will be thrown and certain keywords are reserved for future versions of ECMAScript.
+
+#### Constructor
+The _constructor_ method is used for creating and initialling an object created with a ```class```.
+
+There can _only_ be **one** method with the name ```constructor``` in a class.
+
+A ```SyntaxError``` will be thrown if the class contains more than one occurrence of a ```constructor``` method.
+
+A constructor can use the ```super``` keyword to call the constructor of the super class.
+
